@@ -1,0 +1,10 @@
+Block traffic to a specific IP address:
+#iptables -A OUTPUT -d 8.8.8.8 -j DROP
+
+Block traffic to a specific port:
+#iptables -A OUTPUT -p tcp -dport 21 -j DROP
+
+To clear the changes made to the iptables chains:
+#iptables --flush
+
+
