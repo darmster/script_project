@@ -1,0 +1,11 @@
+1. For interactive monitoring, use:
+# iotop -o
+The -o option to iotop tells it to show only those processes which are doing active
+I/O while it is running. It is a useful option to reduce the noise in the output.
+2. For non-interactive use from shell scripts, use:
+# iotop -b -n 2
+This will tell iotop to print the statistics two times and then exit, which is useful if we
+want this output in a shell script and do some manipulation on it.
+3. Monitor a specific process using the following:
+# iotop -p PID
+Put PID of the process that you wish to monitor, and iotop will restrict the output to it and show statistics.
